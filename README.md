@@ -1,3 +1,5 @@
+[English](#english) | [中文](#中文)
+
 # Awesome Developer Roadmap
 
 > 10 developer career roadmaps from junior to staff. Skills, resources, projects, and salary data.
