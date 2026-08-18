@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Check Markdown files
+      uses: DavidAnson/markdownlint-cli2-action@v16
+      with:
+        globs: '**/*.md'
+        config: '.markdownlint.json'
+
+    - name: Check links
+      uses: lycheeverse/lychee-action@v1.9.0
+      with:
+        args: --verbose --no-progress './**/*.md'
+        fail: false
+
+  spellcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Check spelling
+      uses: streetsidesoftware/cspell-action@v5
+      with:
+        files: '**/*.md'
+        config: '.cspell.json'
+
+  format:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Check file formatting
+      run: |
+        # Check for trailing whitespace
+        if grep -rn ' $' --include='*.md' .; then
+          echo "Found trailing whitespace!"
+          exit 1
+        fi
+
+        # Check for Windows line endings
+        if grep -rn $'\r' --include='*.md' .; then
+          echo "Found Windows line endings!"
+          exit 1
+        fi
+
+        echo "All checks passed!"
