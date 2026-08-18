@@ -1,10 +1,8 @@
-[English](#english) | [中文](#中文)
+[中文版](README.zh.md)
 
 # Awesome Developer Roadmap
 
 > 10 developer career roadmaps from junior to staff. Skills, resources, projects, and salary data.
-
-> 10 个开发者职业路线图，从初级到资深。技能清单、学习资源、项目实战和薪资数据。
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -35,12 +33,12 @@
 Each roadmap includes:
 
 - **ASCII Art Diagram** — Visual career progression path
-- **Skills Checklist** — Checkbox-based skill tracking with checkboxes
+- **Skills Checklist** — Checkbox-based skill tracking
 - **Learning Resources** — Curated books, courses, and documentation
 - **Project Ideas** — Portfolio-worthy projects for each stage
 - **Interview Preparation** — Common questions and tips
 - **Salary Expectations** — Compensation data by level and region
-- **中文版本** — Chinese translation at the end of each file
+- **Chinese Version** — Chinese translation at the end of each file
 
 ---
 
